@@ -26,3 +26,8 @@ You can then install the AMP as you normally would using the MMT.
 Alternatively, you can use the Maven plug-in to install the AMP by running `mvn alfresco:install -Dmaven.alfresco.warLocation=$TOMCAT_HOME/webapps/alfresco` if you are running your Alfresco WAR expanded, or specify the WAR if you are running unexpanded.
 
 No further config or setup is necessary.
+
+Compatibility
+-------------
+Only tested under Alfresco One 5.1 (EE).
+But it should be working until Alfresco 4.2...
