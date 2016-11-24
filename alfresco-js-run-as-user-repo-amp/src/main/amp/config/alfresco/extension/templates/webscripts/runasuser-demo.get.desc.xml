@@ -1,0 +1,13 @@
+<webscript>
+    <shortname>RunAsUser sample Webscript</shortname>
+    <description>Sample script for RunAsUser javascript extension. Restricted to admins for security reasons.</description>
+    <url>/runasuser/demo</url>
+    <authentication>admin</authentication>
+    <format default="html"></format>
+    <args>
+	    <arg>
+	      <name>id</name>
+	      <description>id of user to run the script as</description>
+	    </arg>
+    </args>
+</webscript>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>alfresco-js-run-as-user-repo-amp</artifactId>
+    <name>Alfresco Repository Javascript API Run As User AMP Module</name>
+    
+    <packaging>amp</packaging>
+    <description>Allows to use a runAsUserUtil.runAs(userid, function) function with the Javascript API</description>
+
+    <parent>
+        <groupId>com.amoae</groupId>
+        <artifactId>alfresco-js-run-as-user</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    
+    <dependencies>
+        <dependency>
+            <groupId>${alfresco.groupId}</groupId>
+            <artifactId>alfresco-repository</artifactId>
+        </dependency>
+    </dependencies>
+
+    <profiles>
+        <profile>
+            <id>enterprise</id>
+            <dependencies>
+                <dependency>
+                    <groupId>${alfresco.groupId}</groupId>
+                    <artifactId>alfresco-enterprise-repository</artifactId>
+                    <version>${alfresco.version}</version>
+                    <scope>provided</scope>
+                </dependency>
+            </dependencies>
+        </profile>
+
+        <profile>
+            <id>run</id>
+            <properties>
+                <skipTests>true</skipTests>
+            </properties>
+        </profile>
+    </profiles>
+</project>

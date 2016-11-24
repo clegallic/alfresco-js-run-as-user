@@ -1,0 +1,4 @@
+runner/target
+solr-config/target
+*.log
+alf_data_dev
